@@ -7,14 +7,17 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import Contact from './components/Contact'
 import About from './components/About'
-
+import Services from './components/Services'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
       <Navbar/>
+      <Home/>
       <About/>
+      
+      <Services/>
       <Contact/>
       <Footer/>
     </>
