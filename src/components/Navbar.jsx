@@ -26,8 +26,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`p-4 sticky top-0 z-50 transition-colors duration-300 bg-gray-800 ${isScrolled? 'bg-gray-800 bg-opacity-50 ':'bg-gray-800'}: `}>
-      <div className={`container mx-auto flex justify-between items-center `}>
+    <nav className={`p-4 sticky top-0 z-50 transition-colors duration-300 bg-gray-800 ${isScrolled? 'bg-gray-800  bg-opacity-50 ':'bg-gray-800'}: `}>
+      <div className={`container mx-auto flex justify-between items-center ${isScrolled?'backdrop-blur-sm':''}`}>
         <div className="flex content-center items-center text-white text-xl font-bold">
           <img src="src/images/3.png" alt="" className='h-12 bg-transparent opacity-100'/>
           <h1 className="p-3 ">UK-TECH-BUILD</h1>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <a href="#" className="block text-white px-4 py-2 hover:bg-gray-600 hover:no-underline">FAQs</a>
         </div>
       </div>
-      <div className={`lg:hidden fixed top-0 right-0 w-3/4 h-full bg-gray-800 transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
+      <div className={`lg:hidden fixed top-0 right-0 w-2/4 h-full  backdrop-blur-xl transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
         <div className="p-4">
           <button
             onClick={toggleMenu}
@@ -60,11 +60,11 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
-          <a href="#" className="block text-white px-4 py-2 hover:bg-gray-500 hover:no-underline">Home</a>
-          <a href="#" className="block text-white px-4 py-2 hover:bg-gray-500 hover:no-underline">About</a>
-          <a href="#" className="block text-white px-4 py-2 hover:bg-gray-500 hover:no-underline">Services</a>
-          <a href="#" className="block text-white px-4 py-2 hover:bg-gray-500 hover:no-underline">Our Blogs</a>
-          <a href="#" className="block text-white px-4 py-2 hover:bg-gray-500 hover:no-underline">FAQs</a>
+          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Home</a>
+          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">About</a>
+          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Services</a>
+          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Our Blogs</a>
+          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">FAQs</a>
         </div>
       </div>
     </nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import ServicesCardGroup from "./ServicesCardGroup";
+import Process from "./Process";
 const Services=()=>{
     return(
         <>
@@ -10,6 +11,7 @@ const Services=()=>{
       </header>
       <main className="p-4">
       <ServicesCardGroup/>
+      <Process/>
       </main>
     </div>
         </>

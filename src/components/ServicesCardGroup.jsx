@@ -37,7 +37,7 @@ const ServicesCardGroup = () => {
       <div className="flex flex-wrap justify-center gap-4">
         {allCards.slice(0, visibleCards).map(card => (
           <div key={card.id} className=" bg-white p-4 border rounded shadow-md w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center">
-            <FontAwesomeIcon icon={card.icon} className="text-blue-500 text-5xl mb-2" />
+            <FontAwesomeIcon icon={card.icon} className="text-gray-800 text-5xl mb-2" />
             <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
             <p className="mb-4 text-center">{card.description}</p>
             <a 
