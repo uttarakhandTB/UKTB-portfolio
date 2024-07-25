@@ -1,64 +1,50 @@
-import React from "react"
+import React from "react";
+import { FaPhone, FaLocationArrow, FaMailBulk, FaHourglass } from 'react-icons/fa';
+
 const Contact = () => {
     return (
-        <>
-            <div className=" mt-6 container">
-                <div className="text-[3rem] max-[768px]:text-[2rem] text-center flex-col content-center">
-                    <h1>Contact Us</h1>
+        <div className="mt-6 container mx-auto px-4">
+            <div className="text-3xl md:text-2xl text-center">
+                <h1>Contact Us</h1>
+            </div>
+            <div className="flex flex-col md:flex-row bg-blue-100 mt-6 p-4">
+                <div className="flex flex-wrap w-full md:w-1/2 justify-around items-center">
+                    <div className="p-4 flex flex-col items-center">
+                        <FaLocationArrow className="text-5xl mb-2" />
+                        <h2 className="text-xl md:text-lg">Address</h2>
+                        <p>Kashipur, Uttarakhand</p>
+                    </div>
+                    <div className="p-4 flex flex-col items-center">
+                        <FaPhone className="text-5xl mb-2" />
+                        <h2 className="text-xl md:text-lg">Call Us</h2>
+                        <p>7454945875</p>
+                    </div>
+                    <div className="p-4 flex flex-col items-center">
+                        <FaMailBulk className="text-5xl mb-2" />
+                        <h2 className="text-xl md:text-lg">Mail Us</h2>
+                        <p>sahilrawatjj@gmail.com</p>
+                    </div>
+                    <div className="p-4 flex flex-col items-center">
+                        <FaHourglass className="text-5xl mb-2" />
+                        <h2 className="text-xl md:text-lg">Open Hours</h2>
+                        <p>We are always open</p>
+                    </div>
                 </div>
-                <div className=" flex row m-0 bg-blue-100">
-
-
-                    <div className="col-md-6 col-12 max-[474px]:items-center max-[474px]:items-center flex flex-wrap w-full sm:justify-evenly items-center content-center">
-                        <div className="p-4 flex w-auto h-40 ">
-                            <div className="h-30 w-auto content-center items-center text-center ">
-                                <i className="fa-3x fa-solid fa-location-dot" />
-                                <h2 className="text-[1.8rem] max-[768px]:text-[1.4rem]">Address</h2>
-                                <p className="">Kashipur,Uttarakhand</p>
-                            </div>
-                            <div className="ml-8 w-auto  content-center items-center text-center">
-                                <i className="fa-3x fa-solid fa-phone" />
-                                <h2 className="text-[1.8rem] max-[768px]:text-[1.4rem]">Call Us</h2>
-                                <p>7454945875</p>
-                            </div>
+                <div className="w-full md:w-1/2 mt-6 md:mt-0">
+                    <form action="">
+                        <div className="p-6 flex flex-col items-center w-full">
+                            <input type="text" required placeholder="Your Name" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
+                            <input type="email" required placeholder="Your Email" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
+                            <input type="number" placeholder="Your Number" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
+                            <input type="text" placeholder="Subject" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
+                            <textarea name="textarea" placeholder="Comment" className="rounded h-30 w-full p-3 border-2 border-black mb-4" />
+                            <button className="rounded-full py-2 hover:shadow-lg hover:shadow-gray-600 px-8 text-white uppercase bg-gray-700 transition ease-in-out duration-300">Submit</button>
                         </div>
-                        <div className="max-[474px]:my-40 p-4 w-auto  flex">
-                            <div className=" w-auto  content-center items-center text-center">
-                                <i className="fa-3x fa-solid fa-envelope" />
-                                <h2 className="text-[1.8rem] max-[768px]:text-[1.4rem]">Mail Us</h2>
-                                <p>sahilrawatjj@gmail.com</p>
-                            </div>
-                            <div className="ml-8 content-center items-center text-center">
-                                <i className="fa-3x fa-solid fa-hourglass-start" />
-                                <h2 className="max-[768px]:text-[1.4rem]  text-[1.8rem]">Open Hours</h2>
-                                <p>We are always open</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="max-[474px]:mt-[-130px] col-md-6 col-12 items-center w-full">
-                        <form action="">
-                            <div className="p-6 flex content-center items-center flex-col w-full my-6">
-                                <input type="text" required placeholder="Your Name" className=" rounded  h-10 w-full p-3 border-2 border-black" />
-                                <br />
-                                <input type="email" required placeholder="Your Email" className=" mt-4 rounded h-10 w-full p-3 border-2 border-black" />
-
-                                <div className="row flex m-0">
-                                    <div className="col-md-6 col-12">
-                                        <input type="number" placeholder="Your number" className=" mt-4 rounded h-10 w-full p-3 border-2 border-black" />
-                                    </div>
-                                    <div className="col-md-6 col-12">
-                                        <input type="text" placeholder="Subject" className="mt-4 rounded  h-10 w-full p-3 border-2 border-black" />
-                                    </div>
-                                </div>
-                                <textarea name="textarea" id="" placeholder="Comment" className="mt-4  rounded  h-30 w-full p-3 border-2 border-black" ></textarea>
-                                <button className="rounded-full py-[0.8rem] hover:shadow-lg hover:shadow-gray-600 mt-4 px-[1.8rem] text-white uppercase bg-gray-700 transition ease-in-out duration-300 ">Submit</button>
-                            </div>
-
-                        </form>
-                    </div>
+                    </form>
                 </div>
             </div>
-        </>
-    )
-}
+        </div>
+    );
+};
+
 export default Contact;

@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className={`p-4 sticky top-0 z-50 transition-colors duration-300 bg-gray-800 ${isScrolled? 'bg-gray-800  bg-opacity-50 ':'bg-gray-800'}: `}>
       <div className={`container mx-auto flex justify-between items-center ${isScrolled?'backdrop-blur-sm':''}`}>
         <div className="flex content-center items-center text-white text-xl font-bold">
-          <img src="src/images/3.png" alt="" className='h-12 bg-transparent opacity-100'/>
+          <img src="src/assets/images/3.png" alt="" className='h-12 bg-transparent opacity-100'/>
           <h1 className="p-3 ">UK-TECH-BUILD</h1>
         </div>
         <div className="block lg:hidden">
@@ -60,11 +60,11 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
-          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Home</a>
-          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">About</a>
-          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Services</a>
-          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Our Blogs</a>
-          <a href="#" className="block text-black text-[1.5rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">FAQs</a>
+          <a href="#" className="block text-black text-[1rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Home</a>
+          <a href="#" className="block text-black text-[1rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">About</a>
+          <a href="#" className="block text-black text-[1rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Services</a>
+          <a href="#" className="block text-black text-[1rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">Our Blogs</a>
+          <a href="#" className="block text-black text-[1rem] hover:text-white px-4 py-2 hover:bg-gray-700 hover:no-underline">FAQs</a>
         </div>
       </div>
     </nav>

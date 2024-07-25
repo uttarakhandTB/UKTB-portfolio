@@ -1,33 +1,33 @@
+// App.jsx
 import React, { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch, faLightbulb, faPencilRuler, faCode, faBug, faCheckCircle, faServer, faLifeRing, faArrowRight, faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { FaSearch, FaLightbulb, FaPencilRuler, FaLaptopCode, FaBug, FaCheckCircle, FaServer, FaArrowRight, FaArrowDown } from 'react-icons/fa';
+
 
 const stages = [
-  { icon: faSearch, text: "Discovery" },
-  { icon: faLightbulb, text: "Features" },
-  { icon: faPencilRuler, text: "Design" },
-  { icon: faCode, text: "Development" },
-  { icon: faBug, text: "Testing & Feedback" },
-  { icon: faCheckCircle, text: "Live" },
-  { icon: faServer, text: "Maintenance & Support" }
+  { icon: FaSearch, text: "Discovery" },
+  { icon: FaLightbulb, text: "Features" },
+  { icon: FaPencilRuler, text: "Design" },
+  { icon: FaLaptopCode, text: "Development" },
+  { icon: FaBug, text: "Testing & Feedback" },
+  { icon: FaCheckCircle, text: "Live" },
+  { icon: FaServer, text: "Maintenance & Support" }
 ];
 
-const Card = ({ icon, text }) => (
-  <div className="flex flex-col items-center justify-center p-4 border rounded shadow-lg m-2">
-    <FontAwesomeIcon icon={icon} size="2x" />
+const Card = ({ icon: Icon, text }) => (
+  <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-lg m-2">
+    <Icon size={32} className="text-blue-500" />
     <p className="mt-2 text-center">{text}</p>
   </div>
 );
 
 const ProcessCard = () => {
-  const [isVertical, setIsVertical] = useState(false);
+  const [isVertical, setIsVertical] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {
       setIsVertical(window.innerWidth < 768);
     };
 
-    handleResize(); // Set initial value
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -38,7 +38,9 @@ const ProcessCard = () => {
         <React.Fragment key={index}>
           <Card icon={stage.icon} text={stage.text} />
           {index < stages.length - 1 && (
-            <FontAwesomeIcon icon={isVertical ? faArrowDown : faArrowRight} size="2x" className="m-2" />
+            <div className="m-2">
+              {isVertical ? <FaArrowDown size={32} className="text-gray-500" /> : <FaArrowRight size={32} className="text-gray-500" />}
+            </div>
           )}
         </React.Fragment>
       ))}
