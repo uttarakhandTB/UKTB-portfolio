@@ -2,3 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* .wave {
+    background: #6CABDB;
+    border-radius: 43%;
+    opacity: 0.3;
+  }
+  
+  .wave-animation-one {
+    animation: waveMotion 6s ease-in-out infinite;
+  }
+  
+  .wave-animation-two {
+    animation: waveMotion 8s ease-in-out infinite;
+  }
+  
+  .wave-animation-three {
+    animation: waveMotion 10s ease-in-out infinite;
+  }
+  
+  @keyframes waveMotion {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-10px) scale(1.05);
+    }
+  } */
+  

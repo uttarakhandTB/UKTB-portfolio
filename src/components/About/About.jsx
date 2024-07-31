@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import { cardData } from "../js/AboutCard";
+import { cardData } from "../../js/AboutCard";
 import Clients from "./Clients";
 
 const About = () => {
