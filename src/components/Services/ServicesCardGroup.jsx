@@ -38,7 +38,7 @@ const ServicesCardGroup = () => {
             <p className="mb-4 text-center">{card.description}</p>
             <a 
               href={card.link} 
-              className="inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700"
+              className="inline-block px-4 py-2 bg-blue-500 text-white hover:no-underline rounded hover:bg-blue-700"
             >
               Click Here
             </a>

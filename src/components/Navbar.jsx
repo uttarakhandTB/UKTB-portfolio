@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="p-4 sticky top-0 z-50 transition-colors duration-300 bg-white shadow-sm">
+    <nav className="h-25 p-4 sticky top-0 z-50 transition-colors opacity-95 duration-300 bg-white shadow-sm">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center text-black text-xl font-bold">
           <img src="src/assets/images/3.png" alt="" className="h-12" />
@@ -24,14 +24,14 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden lg:flex items-center">
-          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline">Home</Link>
-          <Link to="/about" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline">About</Link>
-          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline">Services</Link>
-          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline">Our Blogs</Link>
-          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline">FAQs</Link>
+          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Home</Link>
+          <Link to="/about" className="text-blue-500 px-4 py-2  hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">About</Link>
+          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Services</Link>
+          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Our Blogs</Link>
+          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">FAQs</Link>
         </div>
       </div>
-      <div className={`lg:hidden fixed top-0 right-0 w-2/4 h-full backdrop-blur-xl transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
+      <div className={`lg:hidden fixed top-0 right-0 w-2/4 h-full backdrop-blur-xl bg-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
         <div className="p-4">
           <button onClick={toggleMenu} className="text-black focus:outline-none mb-4">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

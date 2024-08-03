@@ -6,7 +6,7 @@ import Clients from "./Clients";
 const About = () => {
     return (
         <>
-            <div className="container bg-sky-50 shadow-sm p-8"><h1 className="text-[3rem] text-center my-4  text-blue-500 font-mono">Uk-Tech-Build <span className="text-[2rem] text-black">About Mission And Story</span></h1>
+            <div className=" bg-sky-50 shadow-sm p-8"><h1 className="text-[3rem] text-center my-4  text-blue-500 font-mono">Uk-Tech-Build <span className="text-[2rem] text-black">About Mission And Story</span></h1>
                 <div className="mt-[2rem]  max-[768px]:content-center max-[768px]:items-center p-8 bg-blue-70 row  items-center">
                     <div className="col-md-6 col-12">
                         <img src="src/assets/images/about.jpeg" className=" max-[768px]:h-auto w-auto h-[25rem] w-100  shadow-lg d-block w-100 rounded" alt="..." />

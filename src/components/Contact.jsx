@@ -1,11 +1,11 @@
 import React from "react";
-import { FaPhone, FaLocationArrow, FaMailBulk, FaHourglass } from 'react-icons/fa';
+import { FaPhoneAlt, FaLocationArrow, FaMailBulk, FaHourglass } from 'react-icons/fa';
 
 const Contact = () => {
     return (
         <div className="mt-6 container mx-auto px-4">
-            <div className="text-3xl md:text-2xl text-center">
-                <h1>Contact Us</h1>
+            <div className=" md:text-2xl text-center">
+                <h1 className="text-[2rem] font-mono">Contact Us</h1>
             </div>
             <div className="flex flex-col md:flex-row bg-blue-100 mt-6 p-4">
                 <div className="flex flex-wrap w-full md:w-1/2 justify-around items-center">
@@ -15,7 +15,7 @@ const Contact = () => {
                         <p>Kashipur, Uttarakhand</p>
                     </div>
                     <div className="p-4 flex flex-col items-center">
-                        <FaPhone className="text-5xl mb-2" />
+                        <FaPhoneAlt className="text-5xl mb-2" />
                         <h2 className="text-xl md:text-lg">Call Us</h2>
                         <p>7454945875</p>
                     </div>

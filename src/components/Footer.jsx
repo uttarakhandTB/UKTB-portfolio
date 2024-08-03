@@ -3,7 +3,7 @@ const Footer=()=>{
     return(
         <>
           <footer className="mt-auto bg-gray-800 h-[50px] flex content-center flex-col pt-3 items-center text-white">
-            <h1>Created with Love By Sahil Rawat</h1>
+            <h1>Created with &#128058; By Sahil Rawat</h1>
           </footer>
         </>
     )
