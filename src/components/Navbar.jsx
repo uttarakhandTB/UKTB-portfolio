@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center text-black text-xl font-bold">
           <img src="src/assets/images/3.png" alt="" className="h-12" />
-          <h1 className="p-3">UK-TECH-BUILD</h1>
+          <h1 className="p-3">NextZenTech</h1>
         </div>
         <div className="block lg:hidden">
           <button onClick={toggleMenu} className="text-black focus:outline-none">
@@ -24,11 +24,11 @@ const Navbar = () => {
           </button>
         </div>
         <div className="hidden lg:flex items-center">
-          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Home</Link>
-          <Link to="/about" className="text-blue-500 px-4 py-2  hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">About</Link>
-          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Services</Link>
-          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Our Blogs</Link>
-          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">FAQs</Link>
+          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 hover:border-sky-500 hover:border mx-2">Home</Link>
+          <Link to="/about" className="text-blue-500 px-4 py-2  hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 hover:border-sky-500 hover:border mx-2">About</Link>
+          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 hover:border-sky-500 hover:border mx-2">Services</Link>
+          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 hover:border-sky-500 hover:border mx-2">Our Blogs</Link>
+          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 hover:border-sky-500 hover:border mx-2">FAQs</Link>
         </div>
       </div>
       <div className={`lg:hidden fixed top-0 right-0 w-2/4 h-full backdrop-blur-xl bg-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>

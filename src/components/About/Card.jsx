@@ -5,8 +5,8 @@ function Card(props) {
         <>
             
                 <div className="rounded flex flex-row">
-                        <div className=" max-w-sm shadow-lg p-4">
-                            <img src={props.imgsrc} className="w-full rounded-lg" alt="" />
+                        <div className={`group max-w-sm hover:shadow-lg rounded p-4 hover:-translate-y-5 transition-all ease-in-out duration-500 ${props.bg}`}>
+                            <img src={props.imgsrc} className="w-full rounded-lg group-hover:scale-110 transition-all ease-in-out duration-500" alt="" />
                                 <div className="px-6 py-4">
                                     <div className="font-bold text-xl mb-2">{props.title}</div>
                                     <p className="text-gray-700 text-base">

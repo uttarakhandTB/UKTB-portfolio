@@ -7,7 +7,7 @@ const FloatingBtn = () => {
       <a 
         href="tel:+917454945875" 
         aria-label="Call us" 
-        className="flex items-center justify-center w-14 h-14 bg-white text-green-500 rounded-full shadow-lg hover:bg-blue-100 transition-colors"
+        className="hover:border-sky-500 hover:border flex items-center justify-center w-14 h-14 bg-white text-green-500 rounded-full shadow-lg hover:bg-blue-100 transition-colors"
       >
         <FaPhoneAlt className="w-6 h-6" />
       </a>
@@ -16,7 +16,7 @@ const FloatingBtn = () => {
         aria-label="WhatsApp us" 
         target="_blank" 
         rel="noopener noreferrer" 
-        className="flex items-center justify-center w-14 h-14 bg-white text-green-500 rounded-full shadow-lg hover:bg-green-200 transition-colors"
+        className="hover:border-sky-500 hover:border flex items-center justify-center w-14 h-14 bg-white text-green-500 rounded-full shadow-lg hover:bg-green-200 transition-colors"
       >
         <FaWhatsapp className="w-6 h-6" />
       </a>
