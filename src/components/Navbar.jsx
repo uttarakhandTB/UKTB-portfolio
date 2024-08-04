@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -10,11 +10,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="h-25 p-4 sticky top-0 z-50 transition-colors opacity-95 duration-300 bg-white shadow-sm">
-      <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center text-black text-xl font-bold">
+    <nav className="sticky top-0 z-50 p-4 transition-colors duration-300 bg-white shadow-sm h-25 opacity-95">
+      <div className="container flex items-center justify-between mx-auto">
+        <div className="flex items-center text-xl font-bold text-black">
           <img src="src/assets/images/3.png" alt="" className="h-12" />
-          <h1 className="p-3">UK-TECH-BUILD</h1>
+          <h1 className="p-3">UK-TECH</h1>
         </div>
         <div className="block lg:hidden">
           <button onClick={toggleMenu} className="text-black focus:outline-none">
@@ -23,17 +23,17 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex items-center">
-          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Home</Link>
-          <Link to="/about" className="text-blue-500 px-4 py-2  hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">About</Link>
-          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Services</Link>
-          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">Our Blogs</Link>
-          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 ">FAQs</Link>
+        <div className="items-center hidden lg:flex">
+          <Link to="/" className="px-4 py-2 text-blue-500 transition-all duration-500 ease-in-out rounded-full hover:text-blue-800 hover:no-underline hover:bg-blue-100 ">Home</Link>
+          <Link to="/about" className="px-4 py-2 text-blue-500 transition-all duration-500 ease-in-out rounded-full hover:text-blue-800 hover:no-underline hover:bg-blue-100 ">About</Link>
+          <Link to="/services" className="px-4 py-2 text-blue-500 transition-all duration-500 ease-in-out rounded-full hover:text-blue-800 hover:no-underline hover:bg-blue-100 ">Services</Link>
+          <Link to="/blogs" className="px-4 py-2 text-blue-500 transition-all duration-500 ease-in-out rounded-full hover:text-blue-800 hover:no-underline hover:bg-blue-100 ">Our Blogs</Link>
+          <Link to="/faqs" className="px-4 py-2 text-blue-500 transition-all duration-500 ease-in-out rounded-full hover:text-blue-800 hover:no-underline hover:bg-blue-100 ">FAQs</Link>
         </div>
       </div>
       <div className={`lg:hidden fixed top-0 right-0 w-2/4 h-full backdrop-blur-xl bg-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
         <div className="p-4">
-          <button onClick={toggleMenu} className="text-black focus:outline-none mb-4">
+          <button onClick={toggleMenu} className="mb-4 text-black focus:outline-none">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
