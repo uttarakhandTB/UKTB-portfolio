@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from 'react-router-dom';
 
 
@@ -9,7 +8,7 @@ const Home = () => {
         <div className="flex flex-wrap items-center p-8 bg-blue-70 m-0 relative z-10">
           <div className="w-full md:w-1/2 flex flex-col items-start text-left md:text-left mb-4 md:mb-0">
             <h1 className="text-blue-500 font-nunito text-3xl md:text-4xl lg:text-5xl mt-4 capitalize">
-              <span className="font-mono" id="span">UK Tech Build</span>
+              <span className="font-mono" id="span"> NextZenTech</span>
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl mt-4 mb-2 capitalize font-mono">
               The mentor who guides you for Management
