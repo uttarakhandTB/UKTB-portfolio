@@ -3,12 +3,12 @@ import { FaPhoneAlt, FaLocationArrow, FaMailBulk, FaHourglass } from 'react-icon
 
 const Contact = () => {
     return (
-        <div className="mt-6 container mx-auto px-4">
-            <div className=" md:text-2xl text-center">
-                <h1 className="text-[2rem] font-mono">Contact Us</h1>
+        <div className="mt-6 px-4 my-10">
+            <div className="text-center">
+                <h1 className="text-2xl md:text-4xl font-mono">Contact Us</h1>
             </div>
-            <div className="flex flex-col md:flex-row bg-blue-100 mt-6 p-4">
-                <div className="flex flex-wrap w-full md:w-1/2 justify-around items-center">
+            <div className="flex flex-col md:flex-row bg-blue-50 mt-6 p-4">
+                <div className="info grid w-full md:w-1/2 justify-around items-center md:grid-cols-2">
                     <div className="p-4 flex flex-col items-center">
                         <FaLocationArrow className="text-5xl mb-2" />
                         <h2 className="text-xl md:text-lg">Address</h2>
@@ -33,12 +33,16 @@ const Contact = () => {
                 <div className="w-full md:w-1/2 mt-6 md:mt-0">
                     <form action="">
                         <div className="p-6 flex flex-col items-center w-full">
-                            <input type="text" required placeholder="Your Name" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
-                            <input type="email" required placeholder="Your Email" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
-                            <input type="number" placeholder="Your Number" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
+                            <div className="flex flex-col md:flex-row md:space-x-4 w-full ">
+                                <input type="text" required placeholder="Your Name" className="rounded h-10 w-full md:w-1/2 p-3 border-2 border-black max-[768px]:mb-4" />
+                                <input type="email" required placeholder="Your Email" className="rounded h-10 w-full md:w-1/2 p-3 border-2 border-black max-[768px]:my-4" />
+                            </div>
+                            <input type="number" placeholder="Your Number" className="rounded h-10 w-full p-3 border-2 border-black my-4" />
                             <input type="text" placeholder="Subject" className="rounded h-10 w-full p-3 border-2 border-black mb-4" />
                             <textarea name="textarea" placeholder="Comment" className="rounded h-30 w-full p-3 border-2 border-black mb-4" />
-                            <button className="rounded-full py-2 hover:shadow-lg hover:shadow-gray-600 px-8 text-white uppercase bg-gray-700 transition ease-in-out duration-300">Submit</button>
+                            <button className="rounded-full py-2 px-8 text-white uppercase bg-gray-700 hover:shadow-lg hover:shadow-gray-600 transition ease-in-out duration-300">
+                                Submit
+                            </button>
                         </div>
                     </form>
                 </div>

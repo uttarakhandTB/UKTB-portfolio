@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 p-4 transition-colors duration-300 bg-white shadow-sm h-25 opacity-95">
+    <nav className="sticky top-0 z-50 p-4 transition-colors duration-500 bg-white shadow-sm h-25 opacity-95">
       <div className="container flex items-center justify-between mx-auto">
         <div className="flex items-center text-xl font-bold text-black">
           <img src="src/assets/images/3.png" alt="" className="h-12" />

@@ -18,9 +18,10 @@ function App() {
   return (
     <>
           <Router>
-            <FloatingBtn/>
-      <Navbar />
-      <div className=" mx-auto mt-5">
+          <Navbar />
+      <div className=" mx-auto bg-no-repeat bg-contain bg-[url('src/assets/images/home-bg.png')]">
+      <FloatingBtn/>
+      
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
