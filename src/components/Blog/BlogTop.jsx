@@ -1,24 +1,23 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
-
-const Home = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  
-  const slideInStyles = useSpring({
-    transform: inView ? 'translateY(0)' : 'translateY(100px)',
-    opacity: inView ? 1 : 0,
-    config: { duration: 1000 },
-  });
-  return (
-    <>
-     
-      <div className=" container relative overflow-hidden mb-[8rem]"> 
+const BlogTop=()=>{
+    const { ref, inView } = useInView({
+        threshold: 0.1,
+        triggerOnce: true,
+      });
+    
+      
+      const slideInStyles = useSpring({
+        transform: inView ? 'translateY(0)' : 'translateY(100px)',
+        opacity: inView ? 1 : 0,
+        config: { duration: 1000 },
+      });
+    return(
+        <>
+            
+      <div className=" container relative overflow-hidden mb-[8rem] "> 
         <animated.div
           style={slideInStyles}
           ref={ref} className="mt-5 flex flex-wrap items-center p-8 bg-blue-70 m-0 relative z-10">
@@ -40,16 +39,15 @@ const Home = () => {
           </div>
           <div className="w-full ml-auto md:w-1/2 h-auto">
             <img
-              src="src/assets/images/Web-Design-and-Development.jpg"
+              src="src/assets/images/blog-top.jpeg"
               className="w-full ml-auto h-[400px]   object-cover  max-[768px]:h-[300px]"
               alt="Front view"
             />
           </div>
         </animated.div>
+        </div>
+        </>
+    )
+}
 
-      </div>
-    </>
-  );
-};
-
-export default Home;
+export default BlogTop;

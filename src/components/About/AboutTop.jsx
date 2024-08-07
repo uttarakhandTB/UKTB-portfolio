@@ -1,29 +1,14 @@
-import { Link } from 'react-router-dom';
-import React from 'react';
-import { useSpring, animated } from '@react-spring/web';
-import { useInView } from 'react-intersection-observer';
-
-const Home = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  
-  const slideInStyles = useSpring({
-    transform: inView ? 'translateY(0)' : 'translateY(100px)',
-    opacity: inView ? 1 : 0,
-    config: { duration: 1000 },
-  });
-  return (
-    <>
-     
-      <div className=" container relative overflow-hidden mb-[8rem]"> 
-        <animated.div
-          style={slideInStyles}
-          ref={ref} className="mt-5 flex flex-wrap items-center p-8 bg-blue-70 m-0 relative z-10">
+import React from "react";
+import { Link } from "react-router-dom";
+const AboutTop=()=>{
+    return(
+        <>
+            
+            <div className=" container relative overflow-hidden "> 
+        <div className="mt-5 flex flex-wrap items-center p-8 bg-blue-70 m-0 relative z-10">
           <div className="w-full md:w-1/2 flex flex-col items-start text-left md:text-left mb-4 md:mb-0">
-            <h1 className="text-blue-500 font-nunito text-3xl md:text-4xl lg:text-5xl mt-4 capitalize">
+          <h1 className=" font-sans text-3xl md:text-4xl lg:text-5xl mt-4 capitalize font-bold">About</h1>
+            <h1 className="text-blue-500 font-nunito text-3xl md:text-4xl lg:text-5xl mt-2 capitalize">
               <span className="font-mono" id="span"> NextZenTech</span>
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl mt-4 mb-2 capitalize font-serif">
@@ -38,18 +23,18 @@ const Home = () => {
               </button>
             </Link>
           </div>
-          <div className="w-full ml-auto md:w-1/2 h-auto">
+          <div className="w-full ml-auto md:w-1/2 ">
             <img
-              src="src/assets/images/Web-Design-and-Development.jpg"
-              className="w-full ml-auto h-[400px]   object-cover  max-[768px]:h-[300px]"
+              src="src/assets/images/about-top.avif"
+              className="w-full ml-auto h-[400px]  object-cover  max-[768px]:h-auto"
               alt="Front view"
             />
           </div>
-        </animated.div>
+        </div>
 
       </div>
-    </>
-  );
-};
+        </>
+    )
+}
 
-export default Home;
+export default AboutTop;

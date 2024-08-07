@@ -2,8 +2,20 @@ import React, { useState } from "react";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
 const Clients = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+});
+
+
+const slideInStyles = useSpring({
+    transform: inView ? 'scale(1)' : 'scale(0.9)',
+    opacity: inView ? 1 : 0,
+    config: { duration: 1000 },
+});
   const [activeSlide, setActiveSlide] = useState(0);
 
   const cards = [
@@ -43,6 +55,8 @@ const Clients = () => {
   };
 
   return (
+    <animated.div style={slideInStyles}
+                ref={ref}>
     <Slider {...settings}>
       {cards.map((card, index) => {
         // Calculate the index of the center card
@@ -63,6 +77,7 @@ const Clients = () => {
         );
       })}
     </Slider>
+    </animated.div>
   );
 }
 

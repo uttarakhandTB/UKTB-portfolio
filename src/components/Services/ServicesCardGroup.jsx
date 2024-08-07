@@ -1,8 +1,20 @@
 // src/CardGroup.js
 import React, { useState } from 'react';
 import { FaLaptopCode, FaPaintBrush, FaShoppingCart, FaPenNib, FaChartLine, FaBullhorn, FaPencilAlt, FaNewspaper, FaBriefcase } from 'react-icons/fa';
-
+import { useSpring, animated } from '@react-spring/web';
+import { useInView } from 'react-intersection-observer';
 const ServicesCardGroup = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
+
+  
+  const slideInStyles = useSpring({
+    transform: inView ? 'translateY(0)' : 'translateY(100px)',
+    opacity: inView ? 1 : 0,
+    config: { duration: 1000 },
+  });
   const allCards = [
     { id: 1, icon: FaPaintBrush, title: 'Web Design', description: 'Professional web design services.', link: '#', bg:'bg-[#9be6c1]' },
     { id: 2, icon: FaLaptopCode, title: 'Web Development', description: 'Custom web development solutions.', link: '#', bg:'bg-[#ffb1cc]' },
@@ -29,6 +41,9 @@ const ServicesCardGroup = () => {
   };
 
   return (
+    <animated.div
+          style={slideInStyles}
+          ref={ref} >
     <div className="flex flex-col items-center p-4">
       <div className="flex flex-wrap justify-center gap-4">
         {allCards.slice(0, visibleCards).map(card => (
@@ -52,6 +67,8 @@ const ServicesCardGroup = () => {
         {showMore ? 'Show More' : 'Show Less'}
       </button>
     </div>
+    </animated.div>
+    
   );
 };
 
