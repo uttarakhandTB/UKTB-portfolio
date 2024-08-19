@@ -16,6 +16,7 @@ const slideInStyles = useSpring({
     opacity: inView ? 1 : 0,
     config: { duration: 1000 },
 });
+
   const [activeSlide, setActiveSlide] = useState(0);
 
   const cards = [
@@ -29,7 +30,7 @@ const slideInStyles = useSpring({
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
@@ -64,12 +65,12 @@ const slideInStyles = useSpring({
 
         // Determine if the current card is the center card
         const isCenter = index === (activeSlide + centerIndex) % cards.length;
-        const scaleClass = isCenter ? 'scale-125' : 'scale-100';
-        const bgShadow= isCenter?'shadow-sm border-2 rounded':''
+        const scaleClass = isCenter ? 'scale-125 rounded-lg transition-all ease-in-out duration-1000' : 'scale-100';
+      
         const mx=isCenter?'mx-4':'mx-2'
         return (
-          <div key={card.id} className="p-2 transition-transform duration-300 ease-in-out">
-            <div className={`rounded-lg shadow-md p-4 h-[150px] transform ${scaleClass} ${bgShadow} ${mx}`}>
+          <div key={card.id} className="p-2 transition-transform duration-300 ease-in-out h-[300px] items-center content-center">
+            <div className={`rounded-lg shadow-md p-4 h-[175px] transform  bg-red-600 ${scaleClass}  ${mx}`}>
               <h3 className="text-xl font-bold">{card.title}</h3>
               <p>{card.description}</p>
             </div>

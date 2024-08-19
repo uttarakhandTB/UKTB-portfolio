@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
+import topImg from "../../assets/images/blog-top.jpeg"
+
 const BlogTop=()=>{
     const { ref, inView } = useInView({
         threshold: 0.1,
@@ -29,8 +31,7 @@ const BlogTop=()=>{
               The mentor who guides you for Management
             </h2>
             <p className="text-base md:text-lg lg:text-[16px] mt-2 font-sans">
-              A one-stop solution to prepare for interviews and apply for your dream job. You will get guidance and skills training through a systematic and elucidated medium. We strive to enable seniors/industry leaders to share their impactful, practical knowledge with aspiring new blood.
-            </p>
+            As a top-rated Best Web Development Company & SEO Company In Kashipur “NextZenTech”, we cater to all your website needs at affordable costs. Known as a reputed web development company in Faridabad, our team is dedicated to creating visually appealing websites optimized for better user experience & conversions.            </p>
             <Link to="/services" className="mt-6">
               <button className="bg-blue-500 text-white rounded-full py-2 px-6 uppercase hover:bg-blue-600 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
                 Services
@@ -39,7 +40,7 @@ const BlogTop=()=>{
           </div>
           <div className="w-full ml-auto md:w-1/2 h-auto">
             <img
-              src="src/assets/images/blog-top.jpeg"
+              src={topImg}
               className="w-full ml-auto h-[400px]   object-cover  max-[768px]:h-[300px]"
               alt="Front view"
             />

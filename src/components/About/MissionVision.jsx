@@ -11,7 +11,7 @@ const MissionVision = () => {
     const slideInStyles = useSpring({
         transform: inView ? 'scale(1)' : 'scale(0.9)',
         opacity: inView ? 1 : 0,
-        config: { duration: 1500 },
+        config: { duration: 1000 },
     });
     return (
         <>

@@ -21,14 +21,15 @@ const About = () => {
     return (
         <>
 
+            <AboutTop />
             <animated.div style={slideInStyles}
                 ref={ref}>
-                <AboutTop />
-                <div className=" shadow-sm p-8 my-10">
+
+                <div className=" p-8 my-10">
                     <div className="bg-white h-[150px] items-center content-center">
                         <h1 className="text-[3rem] text-center   text-blue-500 font-mono max-[768px]:text-[2.5rem]  ">NextZenTech <span className="text-[2rem] text-black max-[768px]:text-[1.5rem]">About Mission And Story</span></h1>
                     </div>
-                    <div className="mt-[2rem]  max-[768px]:content-center max-[768px]:items-center p-8 bg-blue-100 row  items-center">
+                    <div className="mt-[2rem]  max-[768px]:content-center max-[768px]:items-center p-8 bg-blue-50 row  items-center">
                         <div className="col-md-6 col-12">
                             <img src="src/assets/images/about.jpeg" className=" max-[768px]:h-auto w-auto h-[25rem] w-100  shadow-lg d-block w-100 rounded" alt="..." />
                         </div>
@@ -42,7 +43,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <div className=" shadow-sm mt-[6rem] bg-blue-50 p-4"><h1 className="text-center text-[3rem] font-mono">Our Values</h1>
+                <div className=" shadow-sm mt-[6rem]  p-4"><h1 className="text-center text-[3rem] font-mono">Our Values</h1>
                     <div className="  flex flex-row flex-wrap items-center justify-around py-5 sm:justify-evenly">
 
 
@@ -51,16 +52,16 @@ const About = () => {
                     </div>
 
                 </div>
-                
+
                 <div className="">
                     <MissionVisiion />
-                    <div className="mx-[8rem] my-[8rem]">
+                    <div className="mx-[8rem] max-[768px]:mx-3 my-[8rem] h-[400px]" >
                         <h1 className="text-[2rem] text-center font-mono">Our Clients</h1>
                         <Clients />
                     </div>
                 </div>
             </animated.div>
-            
+
         </>
     )
 }

@@ -10,8 +10,7 @@ import About from './components/About/About'
 import Services from './components/Services/Services'
 import FloatingBtn from './components/FloatingBtn'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { useSpring, animated } from '@react-spring/web';
-import { useInView } from 'react-intersection-observer';
+
 import Blogs from './components/Blog/Blogs.jsx'
 
 

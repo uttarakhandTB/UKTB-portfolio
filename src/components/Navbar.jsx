@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from "../assets/images/logo.png"
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,12 +10,12 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 p-4 transition-colors duration-500 bg-white shadow-sm h-25 opacity-95">
-      <div className="container flex items-center justify-between mx-auto">
-        <div className="flex items-center text-xl font-bold text-black">
-          <img src="src/assets/images/3.png" alt="" className="h-12" />
+    <nav className="sticky top-0 z-50 flex transition-colors duration-500 bg-white  h-20 items-center justify-center opacity-95">
+      <div className="container flex items-center  justify-between mx-auto">
+        <div className="flex items-center justify-center text-xl font-bold text-black">
+          <img src={logo} alt="" className="h-16 " />
 
-          <h1 className="p-3">NextZenTech</h1>
+          <h1 className="p-2">NextZenTech</h1>
 
         </div>
         <div className="block lg:hidden">
@@ -25,12 +25,12 @@ const Navbar = () => {
             </svg>
           </button>
         </div>
-        <div className="hidden lg:flex items-center">
-          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100  mx-2">Home</Link>
-          <Link to="/about" className="text-blue-500 px-4 py-2  hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100 mx-2">About</Link>
-          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100   mx-2">Services</Link>
-          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100  mx-2">Our Blogs</Link>
-          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-500 hover:bg-blue-100  mx-2">FAQs</Link>
+        <div className="hidden lg:flex items-center bg-blue-100 p-[5px] rounded-full">
+          <Link to="/" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-300 hover:bg-blue-100  mx-2">Home</Link>
+          <Link to="/about" className="text-blue-500 px-4 py-2  hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-300 hover:bg-blue-100 mx-2">About</Link>
+          <Link to="/services" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-300 hover:bg-blue-100   mx-2">Services</Link>
+          <Link to="/blogs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-300 hover:bg-blue-100  mx-2">Our Blogs</Link>
+          <Link to="/faqs" className="text-blue-500 px-4 py-2 hover:text-blue-800 hover:no-underline rounded-full  transition-all ease-in-out duration-300 hover:bg-blue-100  mx-2">FAQs</Link>
          
         </div>
         <div className={`lg:hidden fixed top-0 right-0 w-2/4 h-full backdrop-blur-xl bg-white transform ${isOpen ? 'translate-x-0' : 'translate-x-full'} transition-transform duration-300 ease-in-out z-50`}>
