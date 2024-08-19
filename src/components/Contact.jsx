@@ -53,7 +53,7 @@ const Contact = () => {
                     </div>
                
                 </animated.div>
-                <animated.div style={formSpring} ref={ref} className="w-full md:w-1/2 mt-6 md:mt-0">
+                <animated.div style={formSpring}  className="w-full md:w-1/2 mt-6 md:mt-0">
               
                     <form action="">
                         <div className="p-2 flex flex-col items-center w-full bg-blue-50 mt-2 h-auto">

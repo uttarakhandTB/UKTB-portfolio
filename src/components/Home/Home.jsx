@@ -45,7 +45,7 @@ const Home = () => {
           
           </animated.div>
          
-         <animated.div style={imgSpring} ref={ref} className="w-full ml-auto md:w-1/2 h-auto">
+         <animated.div style={imgSpring}  className="w-full ml-auto md:w-1/2 h-auto">
          
             <img
               src={topImg}

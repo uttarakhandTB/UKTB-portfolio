@@ -14,7 +14,7 @@ const stages = [
 ];
 
 const Card = ({ icon: Icon, text }) => (
-  <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-lg m-2">
+  <div className="flex flex-col items-center justify-center p-4 border rounded-lg shadow-cardShadow my-3">
     <Icon size={32} className="text-blue-500" />
     <p className="mt-2 text-center">{text}</p>
   </div>

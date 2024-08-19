@@ -52,22 +52,22 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className="lg:ml-16">
             <h1 className="text-xl uppercase font-bold mb-4">Useful Links</h1>
             <div className="flex flex-col space-y-2">
-              <Link className="text-blue-500 hover:text-blue-800 transition-colors" to="/">
+              <Link className="text-blue-500 hover:text-blue-800 transition-colors w-[100px]" to="/">
                 Home
               </Link>
-              <Link className="text-blue-500 hover:text-blue-800 transition-colors" to="/about">
+              <Link className="text-blue-500 hover:text-blue-800 transition-colors w-[100px]" to="/about">
                 About
               </Link>
-              <Link className="text-blue-500 hover:text-blue-800 transition-colors" to="/services">
+              <Link className="text-blue-500 hover:text-blue-800 transition-colors w-[100px]" to="/services">
                 Services
               </Link>
-              <Link className="text-blue-500 hover:text-blue-800 transition-colors" to="/blogs">
+              <Link className="text-blue-500 hover:text-blue-800 transition-colors w-[100px]" to="/blogs">
                 Our Blogs
               </Link>
-              <Link className="text-blue-500 hover:text-blue-800 transition-colors" to="/faqs">
+              <Link className="text-blue-500 hover:text-blue-800 transition-colors w-[100px]" to="/faqs">
                 FAQs
               </Link>
             </div>

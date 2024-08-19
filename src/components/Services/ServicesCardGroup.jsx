@@ -16,7 +16,7 @@ const ServicesCardGroup = () => {
     config: { duration: 1000 },
   });
   const allCards = [
-    { id: 1, icon: FaPaintBrush, title: 'Web Design', description: 'INcorporated the best website designs using high end User Interraction Technologies like Adobe XD, Figma, etc. Launch your own global identity with our experts, who carry great ecperties in web design from scrach to end.', link: '#', bg:'bg-[#9be6c1]' },
+    { id: 1, icon: FaPaintBrush, title: 'Web Design', description: 'Incorporated the best website designs using high end User Interraction Technologies like Adobe XD, Figma, etc. Launch your own global identity with our experts, who carry great ecperties in web design from scrach to end.', link: '#', bg:'bg-[#9be6c1]' },
     { id: 2, icon: FaLaptopCode, title: 'Web Development', description: 'We are the best web development company in India with highly experienced coders. Our way of working is very cool, and our potential to deliver top-notch websites is commendable. We focus on demanding technologies, frameworks, and tools.', link: '#', bg:'bg-[#ffb1cc]' },
     { id: 3, icon: FaShoppingCart, title: 'E-commerce', description: 'Unlock your online business potential with our expert E-commerce development service we craft seamless digital storefronts tailored to your brand. drive sales, enhance customer experience, and stay ahead in the compititive online marketplace with our tailored solutions.', link: '#', bg:'bg-[#9bc9ff]' },
     { id: 4, icon: FaPenNib, title: 'Logo Design', description: 'Creative logo design services.Our logo design services is for muiltiple industries, such as real estate, education, food, hospitality, financial intitution, information technology, fashion, and many more. We also provide custom logo design services. ', link: '#', bg:'bg-[#c8bbff]' },
@@ -47,7 +47,7 @@ const ServicesCardGroup = () => {
     <div className="flex flex-col items-center ">
       <div className="flex flex-wrap justify-center gap-4">
         {allCards.slice(0, visibleCards).map(card => (
-          <div key={card.id} className={`group rounded-lg hover:-translate-y-4 transition-all ease-in-out duration-500  p-4 border rounded shadow-md w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex flex-col items-center ${card.bg}`}>
+          <div key={card.id} className={`group  rounded-2xl  hover:-translate-y-4 transition-all ease-in-out duration-500  p-2  w-full sm:w-full md:w-1/3 lg:w-1/4 flex flex-col items-center shadow-cardShadow `}>
             <card.icon className="rounded-full group-hover:scale-150 transition-all ease-in-out h-[80px] duration-500 text-gray-800 text-5xl  mb-2" />
             <h2 className="text-lg font-semibold mb-2">{card.title}</h2>
             <p className="mb-4 text-center">{card.description}</p>
